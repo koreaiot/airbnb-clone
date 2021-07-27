@@ -44,3 +44,15 @@ class SignUpForm(forms.ModelForm):
         user.username = email
         user.set_password(password)
         user.save()
+
+
+# from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth import get_user_model
+# # 짧은버전
+# UserModel = get_user_model()
+
+
+# class SignUpForm(UserCreationForm):
+#     class Meta(UserCreationForm.Meta):
+#         model = UserModel
+#         fields = ("email",)
